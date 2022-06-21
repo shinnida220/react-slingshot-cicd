@@ -37,10 +37,10 @@ jobs:
 workflows:
   build-test-analyze:
     jobs:
-      build:
-      test:
-        requires:
-          - build
-      analyze:
-        requires:
-          - test
+      - build:
+      - test:
+          requires:
+            - build
+      - analyze:
+          requires:
+            - test
